@@ -24,7 +24,7 @@ public class GenerateFile extends AbstractJavaSamplerClient {
     public Arguments getDefaultParameters() {
         Arguments args = new Arguments();
         args.addArgument("size", "5000");
-        args.addArgument("filename", "");
+        args.addArgument("filename", "temp.txt");
         args.addArgument("variable", "FileName");
         args.addArgument("property", "FileName");
         return args;
