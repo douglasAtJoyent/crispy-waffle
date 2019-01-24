@@ -55,6 +55,7 @@ public class GenerateFile extends AbstractJavaSamplerClient {
             result.setResponseData(String.format("Cannot put obj: %s", e.getMessage()).getBytes());
             result.setSuccessful(false);
             result.sampleEnd();
+            return result;
         }
         result.sampleEnd();
         result.setSuccessful(true);
@@ -63,7 +64,6 @@ public class GenerateFile extends AbstractJavaSamplerClient {
         result.setResponseData(response.getBytes());
         context.getJMeterVariables().put(varName, filename);
         context.getJMeterProperties().put(propName, filename);
-        System.out.println(context.getJMeterVariables().get("FileName"));
         return result;
     }
 }

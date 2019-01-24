@@ -9,3 +9,5 @@ Fill in the parameters
 
 This allows you to save the filename to a property or a variable. So if you are using the file in multiple threads use the property. If it is all in 
 one thread use variable.
+
+Note: the file name is not absolute, it is relative to java.io.tmpdir. This is done on purpose so that when JMeter is exited the OS will take care of the cleanup.
